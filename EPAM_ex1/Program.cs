@@ -5,7 +5,6 @@ namespace SortApp
     {
         static void Main(string[] args)
         {
-            // ввод чисел
             int[] nums = new int[10];
             Console.WriteLine("Введите десять чисел:");
             for (int i = 0; i < nums.Length; i++)
@@ -14,7 +13,6 @@ namespace SortApp
                 nums[i] = Int32.Parse(Console.ReadLine());
             }
 
-            // сортировка
             int temp;
             for (int i = 0; i < nums.Length - 1; i++)
             {
@@ -29,7 +27,6 @@ namespace SortApp
                 }
             }
 
-            // вывод
             Console.WriteLine("Вывод отсортированного массива:");
             for (int i = 0; i < nums.Length; i++)
             {
