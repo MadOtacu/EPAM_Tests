@@ -30,9 +30,29 @@ namespace SortApp
             Console.WriteLine("Вывод отсортированного массива:");
             for (int i = 0; i < nums.Length; i++)
             {
-                Console.Write(nums[i] + " ");
+                Console.WriteLine(nums[i]);
             }
+
+            NumChecker (nums);
             Console.ReadLine();
+        }
+
+        private static void NumChecker (int[] arr)
+        {
+            Console.Write("Введите проверяемое число: ");
+            int checkedNum = Int32.Parse(Console.ReadLine());
+            foreach (int num in arr)
+            {
+                if (checkedNum == num)
+                {
+                    Console.WriteLine($"Число {checkedNum} найдено.");
+                    break;
+                }
+                else 
+                {
+                    Console.WriteLine($"Число {checkedNum} не найдено.");
+                }
+            }
         }
     }
 }
