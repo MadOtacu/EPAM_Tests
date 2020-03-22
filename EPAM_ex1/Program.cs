@@ -6,33 +6,36 @@ namespace SortApp
         static void Main(string[] args)
         {
             int[] nums = new int[10];
+            Sort(nums);
+        }
+        static void Sort (int[] arr)
+        {
             Console.WriteLine("Введите десять чисел:");
-            for (int i = 0; i < nums.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
                 Console.Write("{0}-е число: ", i + 1);
-                nums[i] = Int32.Parse(Console.ReadLine());
+                arr[i] = Int32.Parse(Console.ReadLine());
             }
 
             int temp;
-            for (int i = 0; i < nums.Length - 1; i++)
+            for (int i = 0; i < arr.Length - 1; i++)
             {
-                for (int j = i + 1; j < nums.Length; j++)
+                for (int j = i + 1; j < arr.Length; j++)
                 {
-                    if (nums[i] > nums[j])
+                    if (arr[i] > arr[j])
                     {
-                        temp = nums[i];
-                        nums[i] = nums[j];
-                        nums[j] = temp;
+                        temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
                     }
                 }
             }
 
             Console.WriteLine("Вывод отсортированного массива:");
-            for (int i = 0; i < nums.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine(nums[i]);
+                Console.Write(arr[i] + " ");
             }
-
             Console.ReadLine();
         }
     }
